@@ -112,9 +112,36 @@ $(document).ready(function () {
       // },
     });
 
+    //////////** services slider **//////////
     if ($(window).width() <= 991) {
-      $(".service-item").wrapAll('<div class="swiper-wrapper"></div>')
-      $(".service-items").addClass('<div class="swiper-wrapper"></div>')
+      $(".service-item").wrapAll('<div class="swiper-wrapper"></div>');
+      $(".service-item").wrap('<div class="swiper-slide"></div>');
+      $(".service-items").addClass("swiper").removeClass("service-items");
+      var projectswiper = new Swiper(".services-slider .swiper", {
+        breakpoints: {
+          0: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          767: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+          },
+        },
+        pagination: {
+          el: ".services-slider .swiper-pagination",
+          clickable: true,
+        },
+        on: {
+          init: function (swiper) {
+            lazyLoad();
+          },
+        },
+      });
     }
   }
 });

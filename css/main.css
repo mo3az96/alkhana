@@ -163,7 +163,7 @@ img {
   background-color: transparent;
 }
 
-.projects-section .swiper-pagination {
+section:not(.partners-section) .swiper-pagination {
   position: relative;
   inset: auto;
   width: 100%;
@@ -177,7 +177,15 @@ img {
   margin-top: 20px;
 }
 
-.projects-section .swiper-pagination-bullet {
+@media (max-width: 991px) {
+  section:not(.partners-section) .swiper-pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+section:not(.partners-section) .swiper-pagination-bullet {
   width: 11px;
   height: 11px;
   border-radius: 50%;
@@ -186,7 +194,7 @@ img {
   background-color: #2b3d5b;
 }
 
-.projects-section .swiper-pagination-bullet.swiper-pagination-bullet-active {
+section:not(.partners-section) .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #baae5b;
 }
 
@@ -366,7 +374,7 @@ section {
   background-color: #fff;
 }
 
-.main-slider .swiper-container {
+.main-slider .swiper {
   height: 100%;
 }
 
@@ -776,6 +784,10 @@ body.bg5 .main-slider {
 @media (max-width: 991px) {
   .service-item {
     margin-top: 40px;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
