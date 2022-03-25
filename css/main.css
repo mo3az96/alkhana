@@ -354,13 +354,50 @@ section {
 
 .main-slider {
   height: 100vh;
-  -webkit-transition: 0.3s background-color linear;
-  transition: 0.3s background-color linear;
+  -webkit-transition: 0.5s background-color linear;
+  transition: 0.5s background-color linear;
   background-color: #fff;
 }
 
 .main-slider .swiper-container {
   height: 100%;
+}
+
+.main-slider .swiper-pagination {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: auto;
+  right: auto;
+  inset-inline-end: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-slider .swiper-pagination .swiper-pagination-bullet {
+  margin: 4px 0;
+  height: 20px;
+  width: 3px;
+  background-color: #000;
+  border-radius: 0;
+  opacity: 0.3;
+}
+
+.main-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #baae5b;
+  opacity: 1;
 }
 
 body.bg1 .main-slider {
@@ -391,12 +428,47 @@ body.bg5 .main-slider {
   width: 50%;
 }
 
+.main-title-div {
+  margin: 0 0 23px;
+}
+
 .main-title {
   font-size: 60px;
   font-weight: 700;
   color: #132748;
   line-height: 1.2;
-  margin: 0 0 23px;
+  margin: 0;
+}
+
+.main-title.typed-out {
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: typing 3s forwards;
+          animation: typing 3s forwards;
+  width: 0;
+}
+
+.main-title.typed-out:last-of-type {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .main-p {
