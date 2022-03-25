@@ -1,13 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
+$(window).on("load", function () {
   lazyLoad();
-
-  var mainSwiper = new Swiper(".main-slider>.swiper-container", {
+});
+$(document).ready(function () {
+  //////////** Page slider **//////////
+  var mainSwiper = new Swiper(".main-slider>.swiper", {
     slidesPerView: 1,
     mousewheel: true,
     speed: 500,
     direction: "vertical",
     pagination: {
-      el: ".main-slider>.swiper-pagination",
+      el: ".main-slider>.main-swiper-pagination",
       clickable: true,
     },
     on: {
@@ -15,22 +17,37 @@ document.addEventListener("DOMContentLoaded", function () {
         swipers();
       },
       slideChange: function (swiper) {
-        check(swiper.activeIndex);
+        bgCheck(swiper.activeIndex);
       },
     },
   });
 
-  var eles = document.getElementsByClassName("nav-link");
-  for (var i = 0; i < eles.length; i++) {
-    eles[i].addEventListener("click", function () {
-      var slideIndex = this.getAttribute("data-htef");
-      mainSwiper.slideTo(slideIndex, 500);
-      check(slideIndex);
-    });
+  //////////** Fixed Header Links **//////////
+  $(".nav-link").click(function (e) {
+    var slideIndex = $(this).attr("data-htef");
+    mainSwiper.slideTo(slideIndex, 500);
+    bgCheck(slideIndex);
+  });
+
+  //////////** BaackGround Change **//////////
+  function bgCheck(slideIndex) {
+    $("#header").addClass("fixed");
+    $("body").attr("class", "");
+    $("body").attr("class", "bg" + slideIndex);
+
+    if (slideIndex == 0) {
+      $("#header").removeClass("fixed");
+    }
+    $(".nav-link")
+      .not("[data-htef='" + slideIndex + "']")
+      .removeClass("active");
+    $("[data-htef='" + slideIndex + "'].nav-link").addClass("active");
   }
+
+  //////////** Inner Sliders Init **//////////
   function swipers() {
     //////////** projects slider **//////////
-    var projectswiper = new Swiper(".projects-slider .swiper-container", {
+    var projectswiper = new Swiper(".projects-slider .swiper", {
       loop: true,
       breakpoints: {
         0: {
@@ -61,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
     //////////** partners slider **//////////
-    var partnerswiper = new Swiper(".partners-slider .swiper-container", {
+    var partnerswiper = new Swiper(".partners-slider .swiper", {
       loop: true,
-      mousewheel: true,
+      // mousewheel: true,
       breakpoints: {
         0: {
           slidesPerView: 1,
@@ -94,27 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
       //   },
       // },
     });
-  }
 
-  function check(slideIndex) {
-    document.getElementById("header").classList.add("fixed");
-    var body = document.body;
-    body.removeAttribute("class");
-    body.classList.add("bg" + slideIndex);
-    if (slideIndex == 0) {
-      document.getElementById("header").classList.remove("fixed");
+    if ($(window).width() <= 991) {
+      $(".service-item").wrapAll('<div class="swiper-wrapper"></div>')
+      $(".service-items").addClass('<div class="swiper-wrapper"></div>')
     }
-    if (slideIndex == 4) {
-      mainSwiper.mousewheel.disable();
-    }
-    var eles = document.getElementsByClassName("nav-link");
-    for (var l = 0; l < eles.length; l++) {
-      eles[l].classList.remove("active");
-    }
-    var activeLink = document.querySelectorAll(
-      "a[data-htef='" + slideIndex + "']"
-    )[0];
-
-    activeLink.classList.add("active");
   }
 });
