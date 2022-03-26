@@ -57,6 +57,13 @@ $(document).ready(function () {
       $("header").removeClass("header-scroll");
     }
   });
+
+  $(".menu-btn").on("click", function (e) {
+    $(this).toggleClass("active");
+    $(".logo").toggleClass("active");
+    $(".navbar").slideToggle();
+    $("body").toggleClass("overflow");
+  });
 });
 
 jQuery(function ($) {
