@@ -416,7 +416,7 @@ body.color-light {
 }
 
 .main-title {
-  font-size: 60px;
+  font-size: 48px;
   font-weight: 700;
   color: #132748;
   line-height: 1.2;
@@ -461,7 +461,7 @@ body.color-light {
 }
 
 .main-p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.7;
   color: #79808e;
   margin: 0 0 31px;
@@ -518,6 +518,11 @@ body.color-light {
   top: 0;
   inset-inline-start: calc(50% + 170px);
   bottom: 0;
+}
+
+html[dir="ltr"] .main-img {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 .main-img img {
@@ -641,7 +646,7 @@ body.color-light {
 }
 
 .about-title {
-  font-size: 36px;
+  font-size: 30px;
   color: #fff;
   font-weight: 700;
   margin: 0 0 23px;
@@ -655,11 +660,9 @@ body.color-light {
 }
 
 .about-p {
-  font-size: 20px;
+  font-size: 18px;
   color: #a7abb3;
   font-weight: 300;
-  width: 950px;
-  max-width: 100%;
   line-height: 1.7;
   margin: 0 auto 74px;
 }
@@ -811,7 +814,7 @@ body.color-light {
 }
 
 .service-title {
-  font-size: 36px;
+  font-size: 30px;
   color: #132748;
   font-weight: 700;
   line-height: 1.2;
@@ -832,9 +835,9 @@ body.color-light {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -921,7 +924,7 @@ body.color-light {
 }
 
 .projects-title {
-  font-size: 36px;
+  font-size: 30px;
   color: #132748;
   font-weight: 700;
   margin: 0 0 35px;
@@ -1029,7 +1032,7 @@ body.color-light {
 }
 
 .partners-subtitle {
-  font-size: 24px;
+  font-size: 20px;
   color: #baae5b;
   font-weight: 400;
   margin: 0 0 20px;
@@ -1042,7 +1045,7 @@ body.color-light {
 }
 
 .partners-title {
-  font-size: 36px;
+  font-size: 30px;
   color: #fff;
   font-weight: 700;
   margin: 0 0 44px;
@@ -1191,7 +1194,7 @@ body.color-light {
 }
 
 .contact-title {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
   line-height: 1.2;
   color: #132748;
@@ -1207,7 +1210,7 @@ body.color-light {
 }
 
 .contact-subtitle {
-  font-size: 20px;
+  font-size: 18px;
   color: #79808e;
   line-height: 1.7;
   font-weight: 400;
@@ -1252,7 +1255,7 @@ body.color-light {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   color: #132748;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1276,10 +1279,12 @@ body.color-light {
 }
 
 .contact-item i {
-  font-size: 28px;
   color: #fff;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  -webkit-margin-end: 14px;
+          margin-inline-end: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1291,18 +1296,6 @@ body.color-light {
           justify-content: center;
   border-radius: 50%;
   background-color: #baae5b;
-  -webkit-margin-end: 19px;
-          margin-inline-end: 19px;
-}
-
-@media (max-width: 1199px) {
-  .contact-item i {
-    width: 32px;
-    height: 32px;
-    font-size: 22px;
-    -webkit-margin-end: 14px;
-            margin-inline-end: 14px;
-  }
 }
 
 .contact-item i.la-map-marker-alt ~ span {

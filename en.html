@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html dir="ltr" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -14,9 +14,641 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
-  <body class="overflow">
+  <body data-bs-spy="scroll" data-bs-target="#fixedNavbar">
+    <!-- Start Header -->
+    <header id="header">
+      <div class="container">
+        <div class="header">
+          <a href="en.html" class="logo">
+            <img src="images/logo-en.png" class="img-fluid" />
+          </a>
+          <nav class="navbar" id="fixedNavbar">
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="#main"> Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about"> About Alkhana </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services"> Services </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects"> Projects </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#partners"> Clients </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact"> Contact us </a>
+              </li>
+              <li class="nav-item xs-link">
+                <a class="nav-link" href="index.html"> العربية </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="lang-cont">
+            <a href="index.html" class="lang-link">
+              <i class="las la-globe"></i>
+              العربية
+            </a>
+          </div>
+          <a role="button" class="menu-btn">
+            <i class="las la-bars"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Main -->
+    <section class="main-section" id="main" data-color="white">
+      <div class="container">
+        <div class="main">
+          <div class="main-title-div">
+            <h2 class="main-title typed-out">Professional Agency</h2>
+            <h2 class="main-title typed-out">for Digital Services</h2>
+          </div>
+          <p class="main-p">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout
+          </p>
+          <div class="main-link-cont">
+            <a href="#!" class="main-link"> More about Alkhana </a>
+          </div>
+          <div class="main-img">
+            <img src="images/main.png" />
+          </div>
+        </div>
+        <a
+          href="#about"
+          class="scroll-btn"
+          onclick='$(".nav-item:nth-of-type(2)>.nav-link").trigger( "click" )'
+        >
+          <span></span>
+        </a>
+      </div>
+    </section>
+    <!-- End Main -->
+
+    <!-- Start About -->
+    <section class="about-section" id="about" data-color="dark">
+      <div class="container">
+        <div class="about">
+          <h2 class="about-title">Alkhana net</h2>
+          <p class="about-p">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't look even slightly
+            believable. If you are going to use a passage of Lorem Ipsum, you
+            need to be sure there isn't anything embarrassing hidden in the
+            middle of text. All the Lorem Ipsum generators on the Internet tend
+            to repeat predefined chunks as necessary, making this the first true
+            generator on the Internet. It uses a dictionary of over 200 Latin
+            words, combined with a handful of model sentence structures, to
+            generate Lorem Ipsum which looks reasonable. The generated Lorem
+            Ipsum is therefore always free from repetition, injected humour, or
+            non-characteristic words etc.
+          </p>
+          <div class="about-numbers">
+            <div class="number-desc">
+              <strong>
+                +
+                <span class="number"> 15 </span>
+              </strong>
+              <h6 class="item-name">Years of Experience</h6>
+            </div>
+            <div class="number-desc">
+              <strong>
+                +
+                <span class="number"> 200 </span>
+              </strong>
+              <h6 class="item-name">Satisfied Clients</h6>
+            </div>
+            <div class="number-desc">
+              <strong>
+                <span class="number"> 100 </span>
+              </strong>
+              <h6 class="item-name">Projects</h6>
+            </div>
+            <div class="number-desc">
+              <strong>
+                <span class="number"> 100 </span>
+              </strong>
+              <h6 class="item-name">Experienced Employees</h6>
+            </div>
+          </div>
+          <div class="about-btns">
+            <div class="about-btns">
+              <a
+                href="#services"
+                class="about-btn"
+                onclick='$(".nav-item:nth-of-type(3)>.nav-link").trigger( "click" )'
+                >Our Services</a
+              >
+              <a
+                href="#projects"
+                class="about-btn"
+                onclick='$(".nav-item:nth-of-type(4)>.nav-link").trigger( "click" )'
+                >Our Projects</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About -->
+
+    <!-- Start Services -->
+    <section class="services-section" id="services" data-color="white">
+      <div class="container">
+        <h2 class="service-title">
+          Providing digital services and creative marketing solutions for many
+          sectors
+        </h2>
+        <div class="services-slider">
+          <div class="service-items">
+            <div class="service-item">
+              <div class="service-icon">
+                <img src="images/services/01.png" />
+              </div>
+              <h6 class="service-name">Performance Marketing Management</h6>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <img src="images/services/02.png" />
+              </div>
+              <h6 class="service-name">Influencer Campaigns Management</h6>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <img src="images/services/03.png" />
+              </div>
+              <h6 class="service-name">Media Buying</h6>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <img src="images/services/04.png" />
+              </div>
+              <h6 class="service-name">Mobile Marketing</h6>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <img src="images/services/05.png" />
+              </div>
+              <h6 class="service-name">Content Creation</h6>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <img src="images/services/06.png" />
+              </div>
+              <h6 class="service-name">Video Production</h6>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <img src="images/services/07.png" />
+              </div>
+              <h6 class="service-name">Search Engine Optimization</h6>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Services -->
+
+    <!-- Start Projects -->
+    <section class="projects-section" id="projects" data-color="light">
+      <div class="container">
+        <h2 class="projects-title">Projects</h2>
+
+        <div class="projects-grid">
+          <div class="project-item">
+            <a href="#!" class="project">
+              <div class="project-img loading-img">
+                <img data-src="images/projects/01.jpg" class="lazy-img" />
+              </div>
+              <h6 class="project-name">Tiqny</h6>
+            </a>
+          </div>
+          <div class="project-item">
+            <a href="#!" class="project">
+              <div class="project-img loading-img">
+                <img data-src="images/projects/02.jpg" class="lazy-img" />
+              </div>
+              <h6 class="project-name">Coupon5sm</h6>
+            </a>
+          </div>
+          <div class="project-item">
+            <a href="#!" class="project">
+              <div class="project-img loading-img">
+                <img data-src="images/projects/03.jpg" class="lazy-img" />
+              </div>
+              <h6 class="project-name">menacoupons</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Projects -->
+
+    <!-- Start Partners -->
+    <section class="partners-section" id="partners" data-color="dark">
+      <div class="container">
+        <h6 class="partners-subtitle">Since 2007</h6>
+        <h2 class="partners-title">
+          Honored to be partner with +700 successful brands
+        </h2>
+        <div class="partners-overflow">
+          <div class="partners-grid">
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/01.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/02.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/03.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/04.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/05.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/06.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/07.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/08.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/09.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/10.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/11.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/12.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/13.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/14.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/15.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/16.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/17.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/18.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/19.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/01.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/02.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/03.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/04.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/05.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/06.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/07.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/08.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/09.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/10.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/01.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/02.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/03.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/04.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/05.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/06.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/07.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/08.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/09.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/10.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/11.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/12.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/13.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/14.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/15.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/16.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/17.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/18.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/19.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/01.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/02.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/03.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/04.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/05.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/06.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/07.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/08.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/09.png" />
+              </a>
+            </div>
+            <div class="partner-item">
+              <a href="#!" class="partner">
+                <img src="images/parteners/10.png" />
+              </a>
+            </div>
+          </div>
+          <div class="arrow scroll-right">
+            <button class="scroll-btn" id="scroll-right">
+              <i class="las la-angle-right"></i>
+            </button>
+          </div>
+          <div class="arrow scroll-left">
+            <button class="scroll-btn" id="scroll-left">
+              <i class="las la-angle-left"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Partners -->
+
+    <!-- Start Contact -->
+    <section class="contact-section" id="contact" data-color="white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="contact-title">
+              We are always happy to contact with you and work to grow your
+              business
+            </h2>
+            <h6 class="contact-subtitle">
+              We have a team specialized in all digital services, replying you
+              to provide solutions and appropriate offers
+            </h6>
+            <div class="contacts-list">
+              <a href="#!" class="contact-item">
+                <i class="las la-map-marker-alt"></i>
+                <span> 7 El Hoda St., Mubarak City, Mansoura, Dakahlia, Egypt</span>
+              </a>
+              <a href="tel:+201144056566" class="contact-item">
+                <i class="las la-mobile-alt"></i>
+                <span> +201144056566 </span>
+              </a>
+              <a href="mailto:info@alkhana.net" class="contact-item">
+                <i class="las la-envelope"></i>
+                <span> info@alkhana.net</span>
+              </a>
+              <a href="#!" class="contact-item">
+                <i class="lab la-linkedin-in"></i>
+                <span>alkhananet</span>
+              </a>
+            </div>
+            <div class="footer">
+              <p class="copyrights">© Al Khana Net Software LLC - 2022</p>
+              <p class="information-numbers">C.R 2647 - T.N 457-864-652</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <form class="contact-form">
+              <h2 class="form-title">Send us a message now</h2>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Full Name"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="Mobile"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  placeholder="Your message.. "
+                ></textarea>
+              </div>
+              <button type="submit" class="form-submit">Send</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer xs-footer">
+          <p class="copyrights">© Al Khana Net Software LLC - 2022</p>
+              <p class="information-numbers">C.R 2647 - T.N 457-864-652</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact -->
+
+    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/lazyload.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
