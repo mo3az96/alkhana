@@ -1,5 +1,6 @@
 $(window).on("load", function () {
   lazyLoad();
+  numbers();
 });
 
 $(document).ready(function () {
@@ -19,6 +20,9 @@ $(document).ready(function () {
         window.location.hash = hash;
       }
     );
+    if ($(window).width() <= 767) {
+      $(".menu-btn").trigger("click");
+    }
   });
 
   const scrollContainer = document.querySelectorAll(".partners-overflow")[0];
@@ -51,6 +55,7 @@ $(document).ready(function () {
     $("header").removeClass("header-scroll");
   }
   $(window).scroll(function () {
+    numbers();
     if ($(this).scrollTop() >= 10) {
       $("header").addClass("header-scroll");
     } else {
@@ -75,8 +80,11 @@ jQuery(function ($) {
         $panel = $("section");
 
       // Change 33% earlier than scroll position so colour is there when you arrive.
-      var scroll = $window.scrollTop() + $window.height() / 3;
-
+      if ($(window).width() <= 767) {
+        var scroll = $window.scrollTop() + $window.height() / 10;
+      } else {
+        var scroll = $window.scrollTop() + $window.height() / 3;
+      }
       $panel.each(function () {
         var $this = $(this);
 
@@ -94,3 +102,26 @@ jQuery(function ($) {
     })
     .scroll();
 });
+
+var a = 0;
+function numbers() {
+  if (a === 0 && $(this).scrollTop() >= $(".about-section").offset().top) {
+    $(".number-desc .number").each(function () {
+      $(this)
+        .prop("Counter", 0)
+        .animate(
+          {
+            Counter: $(this).text(),
+          },
+          {
+            duration: 1000,
+            easing: "swing",
+            step: function (now) {
+              $(this).text(Math.ceil(now));
+            },
+          }
+        );
+    });
+    a = 1;
+  }
+}
