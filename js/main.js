@@ -44,6 +44,19 @@ $(document).ready(function () {
   rightBtn.addEventListener("click", (e) => {
     scrollContainer.scrollLeft += 100;
   });
+
+  if ($(this).scrollTop() >= 10) {
+    $("header").addClass("header-scroll");
+  } else {
+    $("header").removeClass("header-scroll");
+  }
+  $(window).scroll(function () {
+    if ($(this).scrollTop() >= 10) {
+      $("header").addClass("header-scroll");
+    } else {
+      $("header").removeClass("header-scroll");
+    }
+  });
 });
 
 jQuery(function ($) {

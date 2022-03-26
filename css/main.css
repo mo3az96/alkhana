@@ -253,14 +253,14 @@ header {
   color: #baae5b;
 }
 
-.fixed {
+header.header-scroll {
   background-color: #fff;
   padding: 15px 0;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-.fixed .logo {
+header.header-scroll .logo {
   width: 95px;
 }
 
@@ -334,31 +334,19 @@ section {
 body {
   -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
+  background-color: #ffffff;
+}
+
+body.color-whitr {
   background-color: #fff;
 }
 
-body.color-0 {
-  background-color: #fff;
-}
-
-body.color-1 {
+body.color-dark {
   background-color: #132748;
 }
 
-body.color-2 {
-  background-color: #fff;
-}
-
-body.color-3 {
+body.color-light {
   background-color: #f7f7f7;
-}
-
-body.color-4 {
-  background-color: #132748;
-}
-
-body.color-5 {
-  background-color: #fff;
 }
 
 .main-section {
@@ -615,7 +603,7 @@ body.color-5 {
 
 .about-btn {
   width: 240px;
-  height: 65px;
+  height: 55px;
   border-radius: 32.5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -627,7 +615,7 @@ body.color-5 {
       -ms-flex-pack: center;
           justify-content: center;
   border: 2px solid #baae5b;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
@@ -641,7 +629,7 @@ body.color-5 {
 }
 
 .about-btn:last-of-type {
-  background-color: #132748;
+  background-color: transparent;
   color: #baae5b;
 }
 
@@ -871,7 +859,20 @@ body.color-5 {
       -ms-flex-align: center;
           align-items: center;
   width: 70px;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.color-white .arrow {
+  background-color: #fff;
+}
+
+.color-dark .arrow {
   background-color: #132748;
+}
+
+.color-light .arrow {
+  background-color: #f7f7f7;
 }
 
 .arrow.scroll-right {
