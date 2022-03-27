@@ -328,24 +328,13 @@ header {
 
 header.header-scroll {
   background-color: #fff;
-  padding: 15px 0;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 14px 0;
+  border-bottom: 1px solid #f7f7f7;
 }
 
 @media (max-width: 991px) {
   header.header-scroll {
     padding: 10px 0;
-  }
-}
-
-header.header-scroll .logo {
-  width: 95px;
-}
-
-@media (max-width: 767px) {
-  header.header-scroll .logo {
-    width: 80px;
   }
 }
 
@@ -518,11 +507,20 @@ body.color-light {
   top: 0;
   inset-inline-start: calc(50% + 170px);
   bottom: 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 html[dir="ltr"] .main-img {
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
+}
+
+@media (min-width: 1500px) {
+  .main-img {
+    background-size: contain;
+  }
 }
 
 .main-img img {
@@ -545,18 +543,6 @@ html[dir="ltr"] .main-img {
     inset-inline-start: 50%;
     height: 100vh;
   }
-}
-
-.Rectangle_3 {
-  border-width: 2px;
-  border-color: #bbbdbf;
-  border-style: solid;
-  position: absolute;
-  left: 687px;
-  top: 700px;
-  width: 22px;
-  height: 43px;
-  z-index: 350;
 }
 
 .scroll-down {
