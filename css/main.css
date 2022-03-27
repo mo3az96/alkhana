@@ -559,7 +559,7 @@ html[dir="ltr"] .main-img {
   z-index: 350;
 }
 
-.scroll-btn {
+.scroll-down {
   width: 22px;
   height: 43px;
   border: 2px solid #bbbdbf;
@@ -575,12 +575,12 @@ html[dir="ltr"] .main-img {
 }
 
 @media (max-width: 767px) {
-  .scroll-btn {
+  .scroll-down {
     bottom: 30px;
   }
 }
 
-.scroll-btn span {
+.scroll-down span {
   width: 2px;
   background-color: #bbbdbf;
   height: 10px;
@@ -597,11 +597,11 @@ html[dir="ltr"] .main-img {
   transition: all 0.3s ease-in-out;
 }
 
-.scroll-btn:hover {
+.scroll-down:hover {
   border-color: #baae5b;
 }
 
-.scroll-btn:hover span {
+.scroll-down:hover span {
   background-color: #baae5b;
 }
 
