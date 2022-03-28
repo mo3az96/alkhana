@@ -76,7 +76,7 @@ $(document).ready(function () {
   $(".menu-btn").on("click", function (e) {
     $(this).toggleClass("active");
     $(".logo").toggleClass("active");
-    $(".navbar").fadeToggle(700);
+    $(".navbar").fadeToggle(300);
     $(".header").toggleClass("active");
     $("body").toggleClass("overflow");
   });

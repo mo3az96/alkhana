@@ -1794,17 +1794,13 @@ textarea.form-control {
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   z-index: 8;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  transition: -webkit-transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  transition: transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  transition: transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06), -webkit-transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .header.active > .splash::after {
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  transition: -webkit-transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  transition: transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  transition: transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06), -webkit-transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
