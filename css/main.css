@@ -1801,10 +1801,10 @@ textarea.form-control {
 }
 
 .header.active > .splash::after {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  transition: -webkit-transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  transition: transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  transition: transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06), -webkit-transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: -webkit-transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06), -webkit-transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
   -webkit-transform: scale(1);
           transform: scale(1);
 }
