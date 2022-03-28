@@ -278,6 +278,13 @@ header {
   color: #baae5b;
 }
 
+html[dir="ltr"] .lang-link {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 .menu-btn {
   display: none;
   -webkit-box-align: center;
@@ -360,6 +367,44 @@ body.color-light {
   background-color: #f7f7f7;
 }
 
+.scroll-up {
+  border-radius: 50%;
+  line-height: 48px;
+  width: 48px;
+  text-align: center;
+  position: fixed;
+  bottom: 40px;
+  inset-inline-end: 30px;
+  z-index: 9;
+  cursor: pointer;
+  display: none;
+  font-size: 21px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+  background-color: #132748;
+}
+
+.color-white .scroll-up {
+  color: #fff;
+  background-color: #132748;
+}
+
+.color-dark .scroll-up {
+  background-color: #fff;
+  color: #132748;
+}
+
+.color-light .scroll-up {
+  color: #fff;
+  background-color: #132748;
+}
+
+.scroll-up:hover {
+  background-color: #baae5b;
+  color: #132748;
+}
+
 .main-section {
   position: relative;
 }
@@ -401,14 +446,14 @@ body.color-light {
 .main-title.typed-out {
   overflow: hidden;
   white-space: nowrap;
-  -webkit-animation: typing 3s forwards;
-          animation: typing 3s forwards;
+  -webkit-animation: typing 2s forwards;
+          animation: typing 2s forwards;
   width: 0;
 }
 
 .main-title.typed-out:last-of-type {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 @-webkit-keyframes typing {
@@ -465,6 +510,12 @@ body.color-light {
   color: #baae5b;
   font-weight: 700;
   text-decoration: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -512,13 +563,21 @@ body.color-light {
   }
 }
 
+html[dir="rtl"] .main-img {
+  background-position: left;
+}
+
 html[dir="ltr"] .main-img {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  background-position: right;
 }
 
 .main-img svg {
   width: 100%;
+}
+
+html[dir="ltr"] .main-img svg {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 .main-img .bg {
@@ -858,7 +917,7 @@ html[dir="ltr"] .main-img {
   color: #132748;
   font-weight: 700;
   line-height: 1.2;
-  width: 660px;
+  width: 600px;
   max-width: 100%;
   margin: 0 auto;
   -webkit-transition: color 0.5s ease;
@@ -1663,7 +1722,6 @@ textarea.form-control {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #132748;
     z-index: 8;
     display: none;
   }
@@ -1704,5 +1762,50 @@ textarea.form-control {
   .navbar .nav-item.xs-link {
     display: block;
   }
+}
+
+.splash {
+  position: absolute;
+  top: 40px;
+  inset-inline-end: 40px;
+  width: 1px;
+  height: 1px;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .splash {
+    display: block;
+  }
+}
+
+.splash::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #132748;
+  width: 284vmax;
+  height: 284vmax;
+  top: -142vmax;
+  inset-inline-start: -142vmax;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  z-index: 8;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: -webkit-transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06), -webkit-transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.header.active > .splash::after {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: -webkit-transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06), -webkit-transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 /*# sourceMappingURL=main.css.map */

@@ -4,6 +4,11 @@ $(window).on("load", function () {
 });
 
 $(document).ready(function () {
+  $(window).scroll(function () {
+    $(this).scrollTop() >= 500
+      ? $(".scroll-up").show()
+      : $(".scroll-up").hide();
+  });
   new bootstrap.ScrollSpy(document.body, {
     target: "#fixedNavbar",
   });
@@ -71,7 +76,8 @@ $(document).ready(function () {
   $(".menu-btn").on("click", function (e) {
     $(this).toggleClass("active");
     $(".logo").toggleClass("active");
-    $(".navbar").slideToggle();
+    $(".navbar").fadeToggle(700);
+    $(".header").toggleClass("active");
     $("body").toggleClass("overflow");
   });
 });

@@ -22,6 +22,7 @@
           <a href="en.html" class="logo">
             <img src="images/logo.svg" class="img-fluid" />
           </a>
+          <div class="splash"></div>
           <nav class="navbar" id="fixedNavbar">
             <ul class="nav nav-pills">
               <li class="nav-item">
@@ -1111,7 +1112,13 @@
       </div>
     </section>
     <!-- End Contact -->
-
+    <a
+      href="#main"
+      class="scroll-up"
+      onclick='$(".nav-item:nth-of-type(1)>.nav-link").trigger( "click" )'
+    >
+      <i class="las la-arrow-up"></i>
+    </a>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
