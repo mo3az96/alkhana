@@ -1557,8 +1557,12 @@ html[dir="ltr"] .main-img svg {
   background-color: #baae5b;
 }
 
-.contact-item i.la-map-marker-alt ~ span {
+html[dir="rtl"] .contact-item i.la-map-marker-alt ~ span {
   direction: rtl;
+}
+
+html[dir="ltr"] .contact-item i.la-map-marker-alt ~ span {
+  direction: ltr;
 }
 
 .contact-item:hover {
