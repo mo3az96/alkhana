@@ -1541,6 +1541,8 @@ html[dir="ltr"] .main-img svg {
   color: #fff;
   width: 32px;
   height: 32px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   font-size: 22px;
   -webkit-margin-end: 14px;
           margin-inline-end: 14px;
