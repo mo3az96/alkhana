@@ -1,7 +1,7 @@
 $(window).on("load", function () {
   lazyLoad();
   numbers();
-  // 
+  //
 });
 
 $(document).ready(function () {
@@ -38,20 +38,40 @@ $(document).ready(function () {
   const scrollContainer = document.querySelectorAll(".partners-overflow")[0];
   const leftBtn = document.getElementById("scroll-left");
   const rightBtn = document.getElementById("scroll-right");
-  scrollContainer.addEventListener("wheel", (e) => {
-    var prev = 1;
-    scrollContainer.scrollLeft -= e.deltaY;
-    prev = scrollContainer.scrollLeft;
+  if (document.dir == "rtl") {
+    scrollContainer.addEventListener("wheel", (e) => {
+      var prev = 1;
+      scrollContainer.scrollLeft -= e.deltaY;
+      prev = scrollContainer.scrollLeft;
+      console.log(scrollContainer.scrollWidth + prev);
 
-    if (
-      !(
-        (scrollContainer.scrollLeft && prev) == 0 ||
-        scrollContainer.scrollWidth + prev == 1140
-      )
-    ) {
-      e.preventDefault();
-    }
-  });
+      if (
+        !(
+          (scrollContainer.scrollLeft && prev) == 0 ||
+          scrollContainer.scrollWidth + prev == 1140
+        )
+      ) {
+        e.preventDefault();
+      }
+    });
+  } else {
+    scrollContainer.addEventListener("wheel", (e) => {
+      var prev = 1;
+      scrollContainer.scrollLeft += e.deltaY;
+      prev = scrollContainer.scrollLeft;
+      console.log(scrollContainer.scrollWidth + prev);
+
+      if (
+        !(
+          (scrollContainer.scrollLeft && prev) == 0 ||
+          scrollContainer.scrollWidth - prev == 1140
+        )
+      ) {
+        e.preventDefault();
+      }
+    });
+  }
+
   leftBtn.addEventListener("click", (e) => {
     scrollContainer.scrollLeft -= 100;
   });
