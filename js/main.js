@@ -1,6 +1,7 @@
 $(window).on("load", function () {
   lazyLoad();
   numbers();
+  // 
 });
 
 $(document).ready(function () {
