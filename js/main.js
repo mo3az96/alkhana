@@ -26,7 +26,11 @@ $(document).ready(function () {
       }
     );
     if ($(window).width() <= 767) {
-      $(".menu-btn").trigger("click");
+      $(".menu-btn").removeClass("active");
+      $(".logo").removeClass("active");
+      $(".navbar").fadeOut(300);
+      $(".header").removeClass("active");
+      $("body").removeClass("overflow");
     }
   });
 
